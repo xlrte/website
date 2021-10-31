@@ -19,7 +19,7 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Is a use-case, service or resource-type you need not supported? No problem! 
+        xlrte comes with batteries included, but is a use-case, service or resource-type you need not supported? No problem! 
         We provide an extensible API that makes it easy to write your own providers. Contributions are welcome!
       </>
     ),
