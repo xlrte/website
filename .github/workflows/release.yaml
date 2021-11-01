@@ -30,4 +30,3 @@ jobs:
           git config --global user.name "xlrte.dev CI"
           git add --all
           git commit -m "auto-commited by xlrte/website"
-          git push origin main
