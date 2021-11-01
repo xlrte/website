@@ -1,0 +1,45 @@
+name: Release Documentation
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-and-release-website:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          name: id_rsa # optional
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+          if_key_exists: replace # replace / ignore / fail; optional (defaults to fail)
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: main
+      - name: Checkout website repo
+        uses: actions/checkout@v2
+        with:
+          repository: xlrte/xlrte.github.io
+          path: web
+      - name: Deploy website
+        run: |
+          ls -ltr
+          cd main
+          npm install -g yarn
+          yarn
+          yarn build
+          cd ../web
+          mv .git ../
+          rm -rf *
+          mv ../.git .
+          cp -r ../main/build/* .
+          echo "xlrte.dev" > CNAME
+          ls -ltr
+          git config --global user.email "ci@xlrte.dev"
+          git config --global user.name "xlrte.dev CI"
+          git add --all
+          git commit -m "auto-commited by xlrte/website"
+          git remote add release git@github.com:xlrte/xlrte.github.io.git
+          git push release main
