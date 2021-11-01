@@ -1,8 +1,5 @@
 name: Release Documentation
-on:
-  push:
-    branches:
-      - main
+on: [push]
 jobs:
   build-and-release-website:
     runs-on: ubuntu-latest
@@ -35,6 +32,7 @@ jobs:
           rm -rf *
           mv ../.git .
           cp -r ../main/build/* .
+          echo "xlrte.dev" > CNAME
           ls -ltr
           git config --global user.email "ci@xlrte.dev"
           git config --global user.name "xlrte.dev CI"
