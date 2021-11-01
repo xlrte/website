@@ -17,14 +17,6 @@ jobs:
         run: |
           ls -ltr
           cd main
-          npm version
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-          cache: 'npm'
-      - run: npm install -g yarn
-      - run: yarn
-      - run: yarn build
-      - name: Deploy website
-        run: |
-          ls -ltr
+          npm install -g yarn
+          yarn
+          yarn build
