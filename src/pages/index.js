@@ -17,7 +17,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            xlrte Tutorial - 5min ⏱️
+            xlrte tutorial - 5min ⏱️
           </Link>
         </div>
       </div>
@@ -29,8 +29,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`Developer Self-Service Without the Infrastructure & IAM pain`}
+      description="Architecture driven Infrastructure automation">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

@@ -4,35 +4,37 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Focus on Architecture, Not Infrastructure',
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Tell xlrte the services you run &amp; 
+        the dependencies they need (databases, message topics etc), 
+        xlrte figures out the underlying infrastructure, networking &amp; IAM needed for you.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: 'Powered by React',
+    title: 'Build Your Own PaaS',
     Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        xlrte comes with batteries included, but is a use-case, service or resource-type you need not supported? No problem! 
+        We provide an extensible API that makes it easy to write your own providers. Contributions are welcome!
       </>
     ),
   },
+  {
+    title: 'Google Cloud Enabled (AWS coming soon)',
+    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    description: (
+      <>
+        GCP-based infrastructure with a focus on Serverless building blocks is well-supported (CloudRun, Cloud Storage, Pub/Sub, CloudSQL, Secret Manager).<br/>
+        AWS Serverless support is coming soon.
+      </>
+    ),
+  },
+
 ];
 
 function Feature({Svg, title, description}) {

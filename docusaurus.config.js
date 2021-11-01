@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'xlrte',
-  tagline: 'Accelerated Serverless without',
+  tagline: 'Developer Self-Service Without the Infrastructure & IAM pain',
   url: 'https://xlrte.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -78,13 +78,13 @@ const config = {
           {
             title: 'Community',
             items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/xlrte',
-              },
+              // {
+              //   label: 'Stack Overflow',
+              //   href: 'https://stackoverflow.com/questions/tagged/xlrte',
+              // },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/xlrte',
+                href: 'https://discord.gg/PakzubspHR',
               },
               {
                 label: 'Twitter',
@@ -106,7 +106,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Chaordic GmbH. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} <a href="https://chaordic.io" target="_blank">Chaordic GmbH</a>.`,
       },
       prism: {
         theme: lightCodeTheme,
