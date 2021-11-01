@@ -8,7 +8,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: main
-
       - name: Checkout website repo
         uses: actions/checkout@v2
         with:
@@ -21,9 +20,16 @@ jobs:
         with:
           node-version: '14'
           cache: 'npm'
+          path: main
       - run: npm install -g yarn
+        with: 
+          path: main
       - run: yarn
+        with: 
+          path: main
       - run: yarn build
+        with: 
+          path: main
       - name: Deploy website
         run: |
           ls -ltr
