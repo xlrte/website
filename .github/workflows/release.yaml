@@ -1,5 +1,8 @@
 name: Release Documentation
-on: [push]
+on:
+  push:
+    branches:
+      - main
 jobs:
   build-and-release-website:
     runs-on: ubuntu-latest
