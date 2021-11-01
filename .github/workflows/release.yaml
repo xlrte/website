@@ -4,6 +4,10 @@ jobs:
   build-and-release-website:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout xlrte.github.io repo
+      uses: actions/checkout@v2
+      with:
+        repository: xlrte/xlrte.github.io
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
       with:
@@ -12,10 +16,6 @@ jobs:
     - run: npm install -g yarn
     - run: yarn
     - run: yarn build
-    - name: Checkout tools repo
-      uses: actions/checkout@v2
-      with:
-        repository: xlrte/xlrte.github.io
     - name: Deploy website
       run: |
         ls -ltr
