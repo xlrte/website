@@ -26,6 +26,8 @@ jobs:
           mv ../.git .
           cp -r ../main/build/* .
           ls -ltr
+          git config --global user.email "ci@xlrte.dev"
+          git config --global user.name "xlrte.dev CI"
           git add --all
           git commit -m "auto-commited by xlrte/website"
           git push origin main
