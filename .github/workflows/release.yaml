@@ -1,7 +1,7 @@
 name: Release Documentation
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  build-and-release-website:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -12,3 +12,11 @@ jobs:
     - run: npm install -g yarn
     - run: yarn
     - run: yarn build
+    - run: |
+      git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/xlrte/xlrte.github.io
+      cd xlrte.github.io
+      find . -path ./.git -prune -o -exec rm -rf {} \; 2> /dev/null
+      copy -r ../build/* .
+      git add .
+      git diff-index --quiet HEAD || git commit -m "Automatic publish from github.com/xlrte/website"
+      git push target master
