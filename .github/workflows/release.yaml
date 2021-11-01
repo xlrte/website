@@ -4,17 +4,26 @@ jobs:
   build-and-release-website:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-        cache: 'npm'
-    - run: npm install -g yarn
-    - run: yarn
-    - run: yarn build
-    - name: Deploy website
-      uses: actions/checkout@v2
-      with:
-        repository: xlrte/xlrte.github.io
-      run: |
-        ls -ltr
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: main
+
+      - name: Checkout website repo
+        uses: actions/checkout@v2
+        with:
+          repository: xlrte/xlrte.github.io
+          path: xlrte.github.io
+      - name: Deploy website
+        run: |
+          ls -ltr
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          cache: 'npm'
+      - run: npm install -g yarn
+      - run: yarn
+      - run: yarn build
+      - name: Deploy website
+        run: |
+          ls -ltr
