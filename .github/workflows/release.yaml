@@ -12,7 +12,8 @@ jobs:
     - run: npm install -g yarn
     - run: yarn
     - run: yarn build
-    - run: |
+    - name: Deploy website
+      run: |
         git clone https://github.com/xlrte/xlrte.github.io
         cd xlrte.github.io
         find . -path ./.git -prune -o -exec rm -rf {} \; 2> /dev/null
