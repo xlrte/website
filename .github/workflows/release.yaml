@@ -20,3 +20,8 @@ jobs:
           npm install -g yarn
           yarn
           yarn build
+          cd ../xlrte.github.io
+          find . -path ./.git -prune -o -exec rm -rf {} \; 2> /dev/null
+          git add .
+          git commit -m "Automatic publish from github.com/xlrte/website"
+          git push origin main
