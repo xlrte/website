@@ -21,4 +21,11 @@ jobs:
           yarn
           yarn build
           cd ../web
+          mv .git ../
+          rm -rf *
+          mv ../.git .
+          cp -r ../main/build/* .
           ls -ltr
+          git add --all
+          git commit -m "auto-commited by xlrte/website"
+          git push origin main
