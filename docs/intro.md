@@ -2,34 +2,38 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+## What `xlrte` does, in user story form
+As a developer,
 
-## Getting Started
+I want to be able to say _"I want to deploy a service that uses a database, a block storage bucket & publishes messages to a topic while listening to another"_,
 
-Get started by **creating a new site**.
+without having to figure out IAM permissions, network setup, initialization order of resources and the dozens of other infrastructure configuration issues that arise.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**:
-
-```shell
-npm init docusaurus@latest my-website classic
+#### Focus on architecture, not infrastructure
+`xlrte` enables just this. What if the below was all you needed to configure it?
+```
+name: my-webapp
+runtime: cloudrun
+spec:
+  base_name: my-webapp
+  http:
+    public: true
+    http2: false
+depends_on:
+  cloudsql: 
+  - name: my-pg-db
+    type: postgres
+  pubsub:
+    consume:
+    - name: upload_events
+    produce:
+    - name: resize_events
+  cloudstorage:
+  - name: media-uploads
+    public: true
+    access: readwrite
 ```
 
-## Start your site
-
-Run the development server:
-
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and display your changes.
+Read on, and we'll walk you through it!
