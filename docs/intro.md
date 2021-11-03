@@ -12,7 +12,7 @@ I want to be able to say _"I want to deploy a service that uses a database, a bl
 without having to figure out IAM permissions, network setup, initialization order of resources and the dozens of other infrastructure configuration issues that arise.
 
 #### Focus on architecture, not infrastructure
-`xlrte` enables just this. What if the below was all you needed to configure it?
+`xlrte` enables just this. The configuration below is all that is needed.
 ```
 name: my-webapp
 runtime: cloudrun
@@ -36,4 +36,4 @@ depends_on:
     access: readwrite
 ```
 
-Read on, and we'll walk you through it!
+Read on, and we'll walk you through it, or checkout our [example project](https://github.com/xlrte/example-app-gcp), that matches this tutorial.
