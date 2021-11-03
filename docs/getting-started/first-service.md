@@ -3,6 +3,7 @@ sidebar_position: 4
 ---
 
 # Setup your first service
+If you want some more context, you can look at our [example project](https://github.com/xlrte/example-app-gcp)
 
 ## Inspect your initialized environment
 If you initialized an environment in the previous step, you should now have something like this in your git repository (assuming you use git):
