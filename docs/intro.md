@@ -15,10 +15,10 @@ without having to figure out IAM permissions, network setup, initialization orde
 `xlrte` enables just this. The configuration below is all that is needed.
 
 ```yaml
-name: my-webapp
+name: my-shiny-app
 runtime: cloudrun
 spec:
-  base_name: my-webapp
+  base_name: my-shiny-app
   http:
     public: true
     http2: false
