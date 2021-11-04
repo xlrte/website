@@ -10,8 +10,8 @@ If you initialized an environment in the previous step, you should now have some
 ```
 .xlrte/config/
              services/
-             environments/[environment name]/resources.yaml
-             environments/[environment name]/pubkeys/[your name & email].asc
+             environments/[environment]/resources.yaml
+             environments/[environment]/pubkeys/[name & email].asc
 ```
 ### resources.yaml
 Your `resources.yaml` should look something like this:
@@ -25,7 +25,7 @@ A key concept of `xlrte` is separation of concerns, this means your service defi
 For now, you do not need to concern yourself with any configuration, as by default we provide sensible defaults for a low-traffic, cheap-to-run development environment.
 
 ## Your first service
-To add your first service, simply create a file such as `.xlrte/config/services/my-shiny-new-services.yaml`. This will be the baseline for this service in _any_ environment.
+To add your first service, simply create a file such as `.xlrte/config/services/my-shiny-new-services.yaml`. This will be the baseline for this service in _any_ environment. The important thing is you place these files in `.xlrte/config/services`, and that they have a `.yaml` or `.yml` file-ending.
 
 A minimal content for your service-yaml would be:
 
@@ -42,7 +42,7 @@ The comments in the example explain most of the fields. We should perhaps explai
 #### A little bit about service version and artifact resolution
 We assume the following things:
 * Your service Docker image is pushed to the `Google Container Registry` of the same project that hosts your xlrte environment.
-* The versions of your service are either defined in `.xlrte/config/environments/[env]/versions.yaml` as simple `[servicename]: [version] key-pairs OR
+* The versions of your service are either defined in `.xlrte/config/environments/[env]/versions.yaml` as simple `[servicename]: [version]` key-pairs OR
   * you use the `-v` flag at runtime to define the version, but this will set the same version for ALL services, should you have more than one.
 
 Based on these assumptions, xlrte will put together the correct artifact to deploy.
