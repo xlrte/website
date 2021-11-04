@@ -7,13 +7,15 @@ sidebar_position: 1
 ## Pre-requities
 
 We expect you to have the following:
+
 * A [Google Cloud Provider](https://cloud.google.com) account (**AWS support coming soon**).
 * The `gcloud` CLI Tools installed (install [instructions here](https://cloud.google.com/sdk/docs/install)).
 * Admin access to create and configure GCP projects or a GCP project pre-configured for you.
 
 ### GCP preparation
 Ensure you are logged into the appropriate gcloud account by running 
-```
+
+```bash
 gcloud auth application-default login
 ```
 

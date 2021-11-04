@@ -1,31 +1,8 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 ---
-
 # Setup your first service
 If you want some more context, you can look at our [example project](https://github.com/xlrte/example-app-gcp), which roughly mirrors this example.
-
-## Inspect your initialized environment
-If you initialized an environment in the previous step, you should now have something like this in your git repository (assuming you use git):
-
-```bash
-.xlrte/config/
-             services/
-             environments/[environment]/resources.yaml
-             environments/[environment]/pubkeys/[name & email].asc
-```
-### resources.yaml
-Your `resources.yaml` should look something like this:
-
-```yaml
-context: [gcp project you chose]
-region: [gcp region]
-```
-
-A key concept of `xlrte` is separation of concerns, this means your service definitions should be a baseline, and anything environment specific should strictly live in the specific environment folder. `resources.yaml` is used to define exactly what it sounds like: environment specific resources, such as compute resources etc for services.
-
-For now, you do not need to concern yourself with any configuration, as by default we provide sensible defaults for a low-traffic, cheap-to-run development environment.
-
 ## Your first service
 To add your first service, simply create a file such as `.xlrte/config/services/my-shiny-new-services.yaml`. This will be the baseline for this service in _any_ environment. The important thing is you place these files in `.xlrte/config/services`, and that they have a `.yaml` or `.yml` file-ending.
 

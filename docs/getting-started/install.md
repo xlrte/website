@@ -3,6 +3,7 @@ sidebar_position: 2
 ---
 
 # Install xlrte
+
 * Download the appropriate build for your platform from our [releases page](https://github.com/xlrte/core/releases/tag/v0.1)
 * Rename the downloaded platform specific file to `xlrte`
 * Add execute permissions to the binary: `chmod u+x xlrte`
