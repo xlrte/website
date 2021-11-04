@@ -5,7 +5,8 @@ sidebar_position: 6
 # Add a database
 
 Remember how your service looks something like this?
-```
+
+```yaml
 name: my-shiny-service # the name of your service
 runtime: cloudrun # runtime, at the moment, only cloudrun supported
 spec:
@@ -16,13 +17,16 @@ spec:
 ```
 
 To add a database, simply add the following lines to the file:
-```
+
+```yaml
 depends_on:
   cloudsql: 
   - name: [desired database name]
     type: postgres
 ```
+
 Next time you run `xlrte apply -e [env]`, xlrte will do the following:
+
 * Create a random username & password as encrypted secrets, stored encrypted in your repository.
 * Deploy the secrets in GCP Secret Manager
 * Create a private network for the database to live in.

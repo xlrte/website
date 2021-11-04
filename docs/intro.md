@@ -13,7 +13,8 @@ without having to figure out IAM permissions, network setup, initialization orde
 
 #### Focus on architecture, not infrastructure
 `xlrte` enables just this. The configuration below is all that is needed.
-```
+
+```yaml
 name: my-webapp
 runtime: cloudrun
 spec:

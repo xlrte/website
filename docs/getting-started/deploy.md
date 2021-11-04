@@ -5,14 +5,18 @@ sidebar_position: 5
 # Deploy your service
 
 Now you can simply run: 
+
 ```
 xlrte apply -e [env name]
 ```
+
 This assumes you setup a `version.yaml` for your environment. 
 Or:
+
 ```
 xlrte apply -e [env name] -v [version of service]
 ```
+
 ..if you did not setup a `version.yaml`.
 
 That's it! xlrte will now deploy your service!

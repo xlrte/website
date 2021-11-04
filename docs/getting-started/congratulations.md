@@ -5,6 +5,7 @@ sidebar_position: 9
 # Congratulations!
 
 In this short amount of time, you have managed to:
+
 * Create an environment.
 * Understand how to create more environment with the same services.
 * Create a service in an environment.

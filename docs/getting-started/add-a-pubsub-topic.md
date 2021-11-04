@@ -7,7 +7,8 @@ sidebar_position: 7
 We assume you already added the `depends_on` block to your service yaml in the previous page (if not, go back at least to see where it fits).
 
 To add Pub/Sub topics, you could add this to the `depends_on` block of your service yaml:
-```
+
+```yaml
   pubsub:
     consume:
     - name: some_topic
@@ -15,6 +16,7 @@ To add Pub/Sub topics, you could add this to the `depends_on` block of your serv
     produce:
     - name: other_topic
 ```
+
 On the next apply, this would do the following:
 * Create `some_topic`, a subscription to said topic and bind an IAM permission to your service that allows it to receive push messages from the subscription (Cloud Run only supports Pub/Sub push for now in GCP). Messages are `POST`ed to `/` of your service.
 * Create `other_topic`, and bind an IAM permission that allows your service to publish to the topic.
