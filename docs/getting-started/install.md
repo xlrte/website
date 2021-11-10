@@ -10,3 +10,5 @@ sidebar_position: 2
 * Put the binary somewhere on your `PATH`, on Mac or Linux for instance `mv xlrte /usr/local/bin/xlrte`
 
 Run `xlrte version` to verify it works. On Mac, you might have to go into `System Preferences > Security & Privacy` and allow the executable to run.
+
+`xlrte help` will give you an overview of available commands, and each sub-command will have further help available with `xlrte [subcommand] help` to help you find relevant arguments and functionality.
