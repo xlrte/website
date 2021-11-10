@@ -6,7 +6,6 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  plugins: ['@docusaurus/plugin-google-gtag'],
   title: 'xlrte',
   tagline: 'Move from Infrastructure-as-Code to Infrastructure-from-Code',
   url: 'https://xlrte.dev',
