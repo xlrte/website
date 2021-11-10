@@ -6,6 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  plugins: ['@docusaurus/plugin-google-gtag'],
   title: 'xlrte',
   tagline: 'Move from Infrastructure-as-Code to Infrastructure-from-Code',
   url: 'https://xlrte.dev',
@@ -42,6 +43,10 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      gtag: {
+        // You can also use your "G-" Measurement ID here.
+        trackingID: 'G-35NP8QRGGB',
+      },
       navbar: {
         title: 'xlrte',
         logo: {
@@ -116,4 +121,4 @@ const config = {
 };
 
 module.exports = config;
-
+console.log(module.exports);
