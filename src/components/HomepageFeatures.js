@@ -11,7 +11,10 @@ const FeatureList = [
 As a developer,
 
 I want to be able to say <i>"I want to deploy a service that uses a database, a block storage bucket & publishes messages to a topic while listening to another"</i>,<br/>
-without having to figure out IAM permissions, network setup, secrets management, initialization order of resources and the dozens of other infrastructure configuration issues that arise.
+without having to figure out IAM permissions, network setup, secrets management, initialization order of resources and the dozens of other infrastructure configuration issues that arise.<br/>
+<br/>
+xlrte fixes this. To find out more, <a href="/docs/intro" rel="nofollow">Read the documentation</a> or checkout our <a href="https://github.com/xlrte/example-app-gcp">example project</a>.
+
 
       </>
     ),
