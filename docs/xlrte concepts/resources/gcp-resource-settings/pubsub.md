@@ -1,7 +1,7 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 ---
 
-# Cloud Run
+# Pub/Sub
 
 ..reference coming soon.
