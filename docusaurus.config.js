@@ -116,3 +116,7 @@ const config = {
 };
 
 module.exports = config;
+
+module.exports.themeConfig.gtag = {trackingID: 'G-35NP8QRGGB'};
+
+// console.log(module.exports);
