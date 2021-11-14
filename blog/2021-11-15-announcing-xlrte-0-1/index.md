@@ -1,6 +1,6 @@
 ---
-slug: welcome
-title: Welcome
+slug: announcing-xlrte-0-1
+title: Announcing xlrte v0.1
 authors: [wfaler]
 tags: [xlrte, introduction]
 ---
