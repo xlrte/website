@@ -35,7 +35,7 @@ env: # environment vars
     very_secret: very-secret #env var name + secret name (by reference)
 ```
 
-### resources.yaml
+## resources.yaml
 By default, you don't have to add _anything_ into the env specific `resources.yaml` as sensible defaults are provided, but you can set the following settings (complete `resources.yaml` shown):
 
 ```yaml

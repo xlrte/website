@@ -24,7 +24,7 @@ depends_on:
 
 This is all you need. But you can optionally define environment specific settings in `resources.yaml`, as below:
 
-### resources.yaml
+## resources.yaml
 Below we show the available settings. All settings show their defaults, so if you want them, they can all be omitted.
 
 ```yaml
