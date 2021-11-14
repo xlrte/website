@@ -28,7 +28,6 @@ This is all you need. But you can optionally define environment specific setting
 Below we show the available settings. All settings show their defaults, so if you want them, they can all be omitted.
 
 ```yaml
-## omitted part of service definition
 context: some-project # project in GCP terms
 region: europe-west6
 resources:
@@ -42,4 +41,10 @@ resources:
     point_in_time_recovery_enabled: false # default false
     backup_enabled: true # defaults to true
     backup_start_time: "04:00" # time of backups to be started
+  # vpc connector resources are optional, and define the resources of the VPC access
+  # between the services and the database instances.
+  vpc_access_connector:
+    min_instances: 2 # default and minimum 2, must be lower than max_instances
+    max_instances: 3 # default and minimum 3, max 10
+    instance_type: e2-standard-4 # default is 'f1-micro', 'e2-standard-4' gives more bandwidth processing ability
 ```

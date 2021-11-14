@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Pub/Sub
 
-..reference coming soon.
+Google Pub/Sub topics are useful for asynchronous service integration. Below you can find the split between service and resource definition available for pub/sub.
 
 ## service.yaml
 Pub/Sub topics are added to the`depends_on` section of a service like this:
