@@ -32,7 +32,7 @@ Below we show the available settings. All settings show their defaults, so if yo
 context: some-project # project in GCP terms
 region: europe-west6
 resources:
-  cloudsq:
+  cloudsql:
   - name: my-pg-db
     machine_type: db-f1-micro # GCP machine type, default is db-f1-micro
     size: 20 # GB size of db, default 10
