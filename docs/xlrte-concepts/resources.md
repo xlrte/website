@@ -1,9 +1,9 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 ---
 
 # What are Resources?
-`Resources` are the services, such as databases, messaging middle-ware, block storage services (GCS, S3) etc that a service could depend on.
+`Resources` are the services, such as databases, messaging middleware, block storage services (GCS, S3) etc that a service could depend on.
 
 Typically resources will be identified by name and have two sets of configurations:
 * Service configuration, in the `depends_on` block.
@@ -12,7 +12,7 @@ Typically resources will be identified by name and have two sets of configuratio
 The latter may not be necessary for all resources, and is not necessary for non-production environments, as all resources come pre-configured with sensible defaults for a cheap-to-run, low volume environment. However, where they are required, they will be separated as above, in order to enforce _separation of concerns_.
 
 ## Example: a Postgres database
-Say we wanted to add a postgres database as a dependency to a service, we might add something like this to the service.yaml file:
+Say we wanted to add a postgres database as a dependency to a service, we might add something like this to the `service.yaml` file:
 
 ```yaml
 depends_on:

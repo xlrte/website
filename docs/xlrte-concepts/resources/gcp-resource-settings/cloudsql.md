@@ -2,6 +2,6 @@
 sidebar_position: 3
 ---
 
-# Pub/Sub
+# Cloud SQL
 
 ..reference coming soon.

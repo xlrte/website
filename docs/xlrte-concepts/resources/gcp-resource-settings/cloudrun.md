@@ -2,6 +2,6 @@
 sidebar_position: 2
 ---
 
-# Cloud SQL
+# Runtime: Cloud Run
 
 ..reference coming soon.
