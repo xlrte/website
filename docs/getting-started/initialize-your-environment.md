@@ -15,7 +15,7 @@ You will need to decide the following things:
 Now you can initialize your first deployment environment by simply running:
 
 ```bash
-xlrte -e [environment name] -p gcp -c [gcp project name] -r [gcp region]
+xlrte init -e [environment name] -p gcp -c [gcp project name] -r [gcp region]
 ```
 
 The `-p` argument is required even though only GCP is supported. This is to select the cloud provider used, as we add support for more.
