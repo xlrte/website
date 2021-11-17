@@ -30,6 +30,7 @@ The following settings are available to pub-sub topics (all defaults shown, do n
 ```yaml
 context: some-project # project in GCP terms
 region: europe-west6
+state_store: some-bucket
 resources:
   pubsub:
   - name: the_topic

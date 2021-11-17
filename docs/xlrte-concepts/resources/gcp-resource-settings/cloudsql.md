@@ -30,6 +30,7 @@ Below we show the available settings. All settings show their defaults, so if yo
 ```yaml
 context: some-project # project in GCP terms
 region: europe-west6
+state_store: some-bucket
 resources:
   cloudsql:
   - name: my-pg-db

@@ -41,6 +41,7 @@ By default, you don't have to add _anything_ into the env specific `resources.ya
 ```yaml
 context: some-project # project in GCP terms
 region: europe-west6
+state_store: some-bucket
 resources:
   cloudrun: # provide a list of services, referenced by name to set resources for each service
   - name: cloudrun-srv # name of service we are defining resources for

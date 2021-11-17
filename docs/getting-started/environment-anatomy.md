@@ -30,6 +30,7 @@ A minimal `resources.yaml` should look something like this:
 ```yaml
 context: [gcp project you chose]
 region: [gcp region]
+state_store: [gcp bucket for storing environment state]
 ```
 
 `xlrte` follows a folder convention, where:
