@@ -39,4 +39,4 @@ Next time you run `xlrte apply -e [env]`, xlrte will do the following:
 That is a whole lot of infrastructure configuration that xlrte does for you by convention!
 
 #### Note: Adding CloudSQL instances take a long time
-Please not that CloudSQL instance creation is far from instant. It can take up to 20 minutes in some cases. Please have patience when you add one.
+Please note that CloudSQL instance creation is far from instant. It can take up to 20 minutes in some cases. Please have patience when you add one.
