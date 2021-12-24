@@ -22,4 +22,4 @@ At the outset, we support `Google Cloud Platform` and the following services:
 We will extend the coverage of both GCP services, as well as work towards supporting _AWS Serverless services_ as well as likely Kubernetes based service runtimes in the future. The core CLI has an extensible API, which means anyone can create their own resource & cloud provider implementations (API does not come with any stability promises before a `1.0` release though).
 
 To learn more, please refer to [our documentation](http://localhost:3000/docs/intro)!
-For further help, please feel free to ask questions on [Discord](https://discord.com/invite/PakzubspHR) or [Github](https://github.com/xlrte/core).
+For further help, please feel free to ask questions on [Discord](https://discord.com/invite/PakzubspHR) or [GitHub](https://github.com/xlrte/core).
